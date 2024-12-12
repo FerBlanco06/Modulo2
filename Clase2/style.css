@@ -1,37 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:wght@200&display=swap');
-.card-info h1 {
-    font-size: 30px;
-    font-style: italic;
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.card-info p {
-    font-size: 20px;
-    font-weight: 200;
-    text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 1rem;
 }
 
-.card button:hover {
-    border: 1px solid rgb(46, 45, 52);
-    background-color: crimson;
-    transform: scale(1.1);
-}
-
-.card button {
-    border: 1px solid white;
-    background-color: black;
-    color: white;
-    border-radius: 100vw;
-    padding: 0.5rem 1rem;
-    transition: 200ms;
-    font-weight: 500;
-}
-
-.card-image-container img {
-    width: 40rem;
-}
-
-.card-image-container {
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    gap: 2rem;
     width: 100%;
+    max-width: 1200px;
 }
 
 .card {
@@ -39,15 +32,61 @@
     color: white;
     width: 45rem;
     padding: 2rem 3rem;
-    margin: 2.5rem;
-    border-radius: 100px;
-    box-sizing: border-box;
-    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
 
-* {
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
+.card-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card-image-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+.card-info {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-info h1 {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.card-info p {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.card button {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+
+.card button:hover {
+    border: 1px solid rgb(46, 45, 52);
+    background-color: crimson;
+    transform: scale(1.1);
 }
