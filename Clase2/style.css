@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     justify-content: center;
@@ -16,6 +15,7 @@ body {
     min-height: 100vh;
     background-color: #f8f9fa;
     padding: 1rem;
+    padding-top: 4rem; 
     position: relative; 
 }
 
@@ -28,7 +28,6 @@ body {
     width: 100%;
     max-width: 1200px;
 }
-
 
 .fixed-button {
     position: fixed;
@@ -51,7 +50,6 @@ body {
     background-color: darkred;
 }
 
-
 .card h1 {
     position: sticky;
     top: 0; 
@@ -60,7 +58,6 @@ body {
     padding: 0.5rem;
     z-index: 10; 
 }
-
 
 .card-info {
     position: relative; 
@@ -78,6 +75,7 @@ body {
     border-radius: 5px;
     max-width: 90%;
 }
+
 .card-image-container img {
     width: 100%;
     max-width: 250px; 
@@ -85,8 +83,6 @@ body {
     object-fit: cover; 
     border-radius: 15px;
 }
-
-
 
 .card button {
     position: static; 
@@ -103,4 +99,69 @@ body {
     border: 1px solid rgb(46, 45, 52);
     background-color: crimson;
     transform: scale(1.1);
+}
+.cards-container {
+    padding-top: 5rem; 
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+}
+
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: crimson;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
 }
